@@ -1,0 +1,30 @@
+E:\OceanBank\OceanBank\obj\Debug\OceanBank.csprojResolveAssemblyReference.cache
+E:\OceanBank\OceanBank\obj\Debug\OceanBank.GUIforATM.resources
+E:\OceanBank\OceanBank\obj\Debug\OceanBank.Properties.Resources.resources
+E:\OceanBank\OceanBank\obj\Debug\OceanBank.csproj.GenerateResource.Cache
+E:\OceanBank\OceanBank\bin\Debug\OceanBank.exe.config
+E:\OceanBank\OceanBank\bin\Debug\OceanBank.exe
+E:\OceanBank\OceanBank\bin\Debug\OceanBank.pdb
+E:\OceanBank\OceanBank\obj\Debug\OceanBank.exe
+E:\OceanBank\OceanBank\obj\Debug\OceanBank.pdb
+E:\OceanBank\OceanBank\obj\Debug\OceanBank.Setup.resources
+C:\My Documents\Courses\2016 S1\EG2753\EG2753 Project\PartialSourceV2\OceanBank\bin\Debug\OceanBank.exe.config
+C:\My Documents\Courses\2016 S1\EG2753\EG2753 Project\PartialSourceV2\OceanBank\obj\Debug\OceanBank.exe
+C:\My Documents\Courses\2016 S1\EG2753\EG2753 Project\PartialSourceV2\OceanBank\obj\Debug\OceanBank.pdb
+C:\My Documents\Courses\2016 S1\EG2753\EG2753 Project\PartialSource\OceanBank\bin\Debug\OceanBank.exe.config
+C:\My Documents\Courses\2016 S1\EG2753\EG2753 Project\PartialSource\OceanBank\obj\Debug\OceanBank.exe
+C:\My Documents\Courses\2016 S1\EG2753\EG2753 Project\PartialSource\OceanBank\obj\Debug\OceanBank.pdb
+D:\C# Repo\PartialSource\PartialSource\OceanBank\bin\Debug\OceanBank.exe.config
+D:\C# Repo\PartialSource\PartialSource\OceanBank\obj\Debug\OceanBank.exe
+D:\C# Repo\PartialSource\PartialSource\OceanBank\obj\Debug\OceanBank.pdb
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\bin\Debug\OceanBank.exe.config
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.exe
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.pdb
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.csprojResolveAssemblyReference.cache
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.GUIforATM.resources
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.Setup.resources
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.Properties.Resources.resources
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.csproj.GenerateResource.Cache
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\bin\Debug\OceanBank.exe
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\bin\Debug\OceanBank.pdb
+D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.Codes.GUI.SelectCard.resources
