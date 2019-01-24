@@ -23,7 +23,7 @@ namespace OceanBank
             {
                 bigDisplayLBL.Text = "Please select your transaction";
                 smallDisplayLBL.Text = "";
-                left1BTN.Text = "View Balance"; left2BTN.Text = "Withdraw"; left3BTN.Text = ""; left4BTN.Text = "";
+                left1BTN.Text = "View Balance"; left2BTN.Text = "Withdraw"; left3BTN.Text = (theCard.getNumAccounts() > 1 ? "Transfer Funds" : ""); left4BTN.Text = "";
                 right1BTN.Text = "About OceanBank"; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Exit";
             }
         }
@@ -38,6 +38,19 @@ namespace OceanBank
         {
             State nextStep = new ChooseAcctToWithdrawState(mainForm, language);
             return nextStep;
+        }
+
+        public override State handleLeft3BTNClick()
+        {
+            // Can't transer funds if there is only one account
+            if(theCard.getNumAccounts() > 1)
+            {
+                return new ChooseAcctToTransferFundsFromState(mainForm, language);
+            }
+            else
+            {
+                return base.handleLeft3BTNClick();
+            }
         }
 
         public override State handleRight1BTNClick()

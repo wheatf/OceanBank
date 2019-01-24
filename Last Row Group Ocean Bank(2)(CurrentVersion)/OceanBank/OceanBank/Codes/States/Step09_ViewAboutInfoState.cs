@@ -11,7 +11,7 @@ namespace OceanBank
         public ViewAboutInfoState(GUIforATM mainForm, string language) : base(mainForm, language)
         {
 
-            bigDisplayLBL.Text = "OceanBank is the best bank in Singapore,\nJB, and some say Batam !";
+            bigDisplayLBL.Text = "Last Row Group Ocean Bank is a large consumer banking company in Singapore and have a network of more than 500 ATMs machines located island-wide";
             smallDisplayLBL.Text = "";
             left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
             right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Back to Main Menu";

@@ -31,5 +31,10 @@ namespace OceanBank
         {
             balance = balance - amt;
         }
+
+        public void deposit(double amt)
+        {
+            balance = balance + amt;
+        }
     }
 }

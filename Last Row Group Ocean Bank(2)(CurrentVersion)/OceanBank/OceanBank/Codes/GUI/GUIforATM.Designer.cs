@@ -315,8 +315,10 @@
             this.Controls.Add(this.smallDisplayLBL);
             this.Controls.Add(this.bigDisplayLBL);
             this.Controls.Add(this.left1BTN);
+            this.KeyPreview = true;
             this.Name = "GUIforATM";
             this.Text = "OceanBank ATM Emulator";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GUIforATM_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.rightPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPicBox)).EndInit();
             this.ResumeLayout(false);

@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -74,6 +75,13 @@
     <Compile Include="Codes\States\Step05A_ChooseAcctToWithdrawState.cs" />
     <Compile Include="Codes\States\Step05B_EnterAmtToWithdrawState.cs" />
     <Compile Include="Codes\States\Step05C_TakeCashState.cs" />
+    <Compile Include="Codes\States\Step05D_MoreWithdrawalState.cs" />
+    <Compile Include="Codes\States\Step07A_ChooseAcctToTransferFundsFromState.cs" />
+    <Compile Include="Codes\States\Step07B_ChooseAcctToTransferFundsToState.cs" />
+    <Compile Include="Codes\States\Step07C_ConfirmSelectedAcctTransferFundsState.cs" />
+    <Compile Include="Codes\States\Step07D_EnterAmountTransferFundsState.cs" />
+    <Compile Include="Codes\States\Step07E_ConfirmAmountTransferState.cs" />
+    <Compile Include="Codes\States\Step07F_MoreTransferFundsState.cs" />
     <Compile Include="Codes\States\Step09_ViewAboutInfoState.cs" />
     <Compile Include="Codes\States\Step99_RemoveCardState.cs" />
     <Compile Include="Codes\Utility\IsOfType.cs" />

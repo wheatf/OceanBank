@@ -10,7 +10,7 @@ namespace OceanBank
     {
         public ViewBalanceState(GUIforATM mainForm, string language, string acctNo) : base(mainForm, language)
         {
-            bigDisplayLBL.Text = "Balance for account " + acctNo + "\n$" + string.Format("{0:0.00}", theCard.getAcctUsingAcctNo(acctNo).getBalance());
+            bigDisplayLBL.Text = "Balance for account " + acctNo + "\n" + string.Format("{0:C}", theCard.getAcctUsingAcctNo(acctNo).getBalance());
             left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
             right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Back to Main Menu";
 

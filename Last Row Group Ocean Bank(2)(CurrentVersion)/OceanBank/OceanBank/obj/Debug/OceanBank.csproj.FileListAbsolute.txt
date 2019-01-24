@@ -28,3 +28,16 @@ D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.
 D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\bin\Debug\OceanBank.exe
 D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\bin\Debug\OceanBank.pdb
 D:\C# Repo\Last Row Group Ocean Bank(2)\OceanBank\OceanBank\obj\Debug\OceanBank.Codes.GUI.SelectCard.resources
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\bin\Debug\OceanBank.exe.config
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.exe
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.pdb
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\bin\Debug\OceanBank.exe
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\bin\Debug\OceanBank.pdb
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.csprojResolveAssemblyReference.cache
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.GUIforATM.resources
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.Codes.GUI.SelectCard.resources
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.Setup.resources
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.Properties.Resources.resources
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.csproj.GenerateResource.Cache
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml

@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 
 namespace OceanBank
 {
-    class EnterAmtToWithdrawState : State
+    class EnterAmtTransferFundsState : State
     {
         private string amountEnteredTxt;
-        private string acctNo;
+        private string acctNoFrom;
+        private string acctNoTo;
 
-        public EnterAmtToWithdrawState(GUIforATM mainForm, string language, string acctNo) : base(mainForm, language)
+        public EnterAmtTransferFundsState(GUIforATM mainForm, string language, 
+            string acctNoFrom,
+            string acctNoTo) : 
+            base(mainForm, language)
         {
-            this.acctNo = acctNo;
+            this.acctNoFrom = acctNoFrom;
+            this.acctNoTo = acctNoTo;
 
-            bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nEnter amount to withdraw";
+            bigDisplayLBL.Text = bigDisplayLBL.Text = "Please enter the amount to transfer";
             smallDisplayLBL.Text = "";
             left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
             right1BTN.Text = "Ok"; right2BTN.Text = "Clear"; right3BTN.Text = ""; right4BTN.Text = "Back";
@@ -86,56 +91,50 @@ namespace OceanBank
 
         public override State handleRight1BTNClick()
         {
-            State nextStep = new EnterAmtToWithdrawState(mainForm, language, acctNo);
+            State nextStep = new EnterAmtTransferFundsState(mainForm, language, acctNoFrom, acctNoTo);
 
-            double withdrawAmt;
-            Account withdrawFromAcct;
+            double transferAmt;
+            Account transferFromAcct;
 
-            withdrawFromAcct = theCard.getAcctUsingAcctNo(acctNo);
-            //withdrawFromAcct.withdraw(withdrawAmt);
+            transferFromAcct = theCard.getAcctUsingAcctNo(acctNoFrom);
 
             // input is empty
             if (string.IsNullOrWhiteSpace(amountEnteredTxt))
             {
-                bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter an amount";
+                bigDisplayLBL.Text = "Please enter an amount";
                 amountEnteredTxt = "";
                 smallDisplayLBL.Text = amountEnteredTxt;
             }
             // input is not numeric
-            else if(!amountEnteredTxt.IsDouble())
+            else if (!amountEnteredTxt.IsDouble())
             {
-                bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nOnly numeric values are allowed";
+                bigDisplayLBL.Text = "Only numeric values are allowed";
                 amountEnteredTxt = "";
                 smallDisplayLBL.Text = amountEnteredTxt;
             }
             else
             {
-                withdrawAmt = Convert.ToDouble(amountEnteredTxt);
+                transferAmt = Convert.ToDouble(amountEnteredTxt);
 
                 // input is less than or equals 0
-                if(withdrawAmt <= 0)
+                if (transferAmt <= 0)
                 {
-                    bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter an amount larger than 0";
+                    bigDisplayLBL.Text = "Please enter an amount larger than 0";
                     amountEnteredTxt = "";
                     smallDisplayLBL.Text = amountEnteredTxt;
                 }
-                // input is not in mutiples of 10
-                else if (withdrawAmt % 10d != 0)
+                else if (transferAmt > transferFromAcct.getBalance())
                 {
-                    bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter in multiples of 10 or 100";
-                    amountEnteredTxt = "";
-                    smallDisplayLBL.Text = amountEnteredTxt;
-                }
-                else if (withdrawAmt > withdrawFromAcct.getBalance())
-                {
-                    bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nAmount is larger than your balance\nSelect a smaller amount";
+                    bigDisplayLBL.Text = "Amount is larger than " + acctNoFrom + "'s balance\nSelect a smaller amount";
                     amountEnteredTxt = "";
                     smallDisplayLBL.Text = amountEnteredTxt;
                 }
                 else
                 {
-                    withdrawFromAcct.withdraw(withdrawAmt);
-                    nextStep = new TakeCashState(mainForm, language, acctNo);
+                    nextStep = new ConfirmAmountTransferState(mainForm, language,
+                        acctNoFrom,
+                        acctNoTo,
+                        transferAmt);
                 }
             }
 
@@ -151,8 +150,7 @@ namespace OceanBank
 
         public override State handleRight4BTNClick()
         {
-            State nextStep = new ChooseAcctToWithdrawState(mainForm, language);
-            return nextStep;
+            return new ChooseAcctToTransferFundsFromState(mainForm, language);
         }
 
         private State processKey(string k)

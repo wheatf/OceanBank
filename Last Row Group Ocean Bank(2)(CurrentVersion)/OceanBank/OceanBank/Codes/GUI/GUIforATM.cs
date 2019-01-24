@@ -181,6 +181,70 @@ namespace OceanBank
             currentState = currentState.handleRight4BTNClick();
         }
 
+        private void GUIforATM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar)
+            {
+                case (char)Keys.D1:
+                case (char)Keys.NumPad1:
+                    keysound.Play();
+                    currentState = currentState.handleKey1BTNClick();
+                    break;
 
+                case (char)Keys.D2:
+                case (char)Keys.NumPad2:
+                    keysound.Play();
+                    currentState = currentState.handleKey2BTNClick();
+                    break;
+
+                case (char)Keys.D3:
+                case (char)Keys.NumPad3:
+                    keysound.Play();
+                    currentState = currentState.handleKey3BTNClick();
+                    break;
+
+                case (char)Keys.D4:
+                case (char)Keys.NumPad4:
+                    keysound.Play();
+                    currentState = currentState.handleKey4BTNClick();
+                    break;
+
+                case (char)Keys.D5:
+                case (char)Keys.NumPad5:
+                    keysound.Play();
+                    currentState = currentState.handleKey5BTNClick();
+                    break;
+
+                case (char)Keys.D6:
+                case (char)Keys.NumPad6:
+                    keysound.Play();
+                    currentState = currentState.handleKey6BTNClick();
+                    break;
+
+                case (char)Keys.D7:
+                case (char)Keys.NumPad7:
+                    keysound.Play();
+                    currentState = currentState.handleKey7BTNClick();
+                    break;
+
+                case (char)Keys.D8:
+                case (char)Keys.NumPad8:
+                    keysound.Play();
+                    currentState = currentState.handleKey8BTNClick();
+                    break;
+
+                case (char)Keys.D9:
+                case (char)Keys.NumPad9:
+                    keysound.Play();
+                    currentState = currentState.handleKey9BTNClick();
+                    break;
+
+                case (char)Keys.D0:
+                case (char)Keys.NumPad0:
+                    keysound.Play();
+                    currentState = currentState.handleKey0BTNClick();
+                    break;
+            }
+        }
     }
 }

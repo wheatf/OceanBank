@@ -151,77 +151,77 @@ namespace OceanBank
 
             if (User1Account1BalanceIsNotDouble())
             {
-                MessageBox.Show("User 1's Account 1's Balance is not decimal!");
+                MessageBox.Show("User 1's Account 1's Balance is not numeric!");
                 return;
             }
             if (User1Account2BalanceIsNotDouble())
             {
-                MessageBox.Show("User 1's Account 2's Balance is not decimal!");
+                MessageBox.Show("User 1's Account 2's Balance is not numeric!");
                 return;
             }
             if (User1Account3BalanceIsNotDouble())
             {
-                MessageBox.Show("User 1's Account 3's Balance is not decimal!");
+                MessageBox.Show("User 1's Account 3's Balance is not numeric!");
                 return;
             }
             if (User1Account4BalanceIsNotDouble())
             {
-                MessageBox.Show("User 1's Account 4's Balance is not decimal!");
+                MessageBox.Show("User 1's Account 4's Balance is not numeric!");
                 return;
             }
             if (User1Account5BalanceIsNotDouble())
             {
-                MessageBox.Show("User 1's Account 5's Balance is not decimal!");
+                MessageBox.Show("User 1's Account 5's Balance is not numeric!");
                 return;
             }
             if (User2Account1BalanceIsNotDouble())
             {
-                MessageBox.Show("User 2's Account 1's Balance is not decimal!");
+                MessageBox.Show("User 2's Account 1's Balance is not numeric!");
                 return;
             }
             if (User2Account2BalanceIsNotDouble())
             {
-                MessageBox.Show("User 2's Account 2's Balance is not decimal!");
+                MessageBox.Show("User 2's Account 2's Balance is not numeric!");
                 return;
             }
             if (User2Account3BalanceIsNotDouble())
             {
-                MessageBox.Show("User 2's Account 3's Balance is not decimal!");
+                MessageBox.Show("User 2's Account 3's Balance is not numeric!");
                 return;
             }
             if (User2Account4BalanceIsNotDouble())
             {
-                MessageBox.Show("User 2's Account 4's Balance is not decimal!");
+                MessageBox.Show("User 2's Account 4's Balance is not numeric!");
                 return;
             }
             if (User2Account5BalanceIsNotDouble())
             {
-                MessageBox.Show("User 2's Account 5's Balance is not decimal!");
+                MessageBox.Show("User 2's Account 5's Balance is not numeric!");
                 return;
             }
             if (User3Account1BalanceIsNotDouble())
             {
-                MessageBox.Show("User 3's Account 1's Balance is not decimal!");
+                MessageBox.Show("User 3's Account 1's Balance is not numeric!");
                 return;
             }
             if (User3Account2BalanceIsNotDouble())
             {
-                MessageBox.Show("User 3's Account 2's Balance is not decimal!");
+                MessageBox.Show("User 3's Account 2's Balance is not numeric!");
                 return;
             }
             if (User3Account3BalanceIsNotDouble())
             {
-                MessageBox.Show("User 3's Account 3's Balance is not decimal!");
+                MessageBox.Show("User 3's Account 3's Balance is not numeric!");
                 return;
             }
             if (User3Account4BalanceIsNotDouble())
             {
-                MessageBox.Show("User 3's Account 4's Balance is not decimal!");
+                MessageBox.Show("User 3's Account 4's Balance is not numeric!");
                 return;
             }
             if (User3Account5BalanceIsNotDouble())
             {
-                MessageBox.Show("User 3's Account 5's Balance is not decimal!");
+                MessageBox.Show("User 3's Account 5's Balance is not numeric!");
                 return;
             }
 
