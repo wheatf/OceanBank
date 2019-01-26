@@ -41,3 +41,4 @@ D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\
 D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.csproj.GenerateResource.Cache
 D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\C# Repo\Last Row Group Ocean Bank(2)(CurrentVersion)\OceanBank\OceanBank\obj\Debug\OceanBank.Codes.GUI.DepositAmount.resources

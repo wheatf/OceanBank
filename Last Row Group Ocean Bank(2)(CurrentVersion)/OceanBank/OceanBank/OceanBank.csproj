@@ -50,7 +50,14 @@
     <Compile Include="Codes\BankStuff\Account.cs" />
     <Compile Include="Codes\BankStuff\Card.cs" />
     <Compile Include="Codes\GUI\CardReader.cs" />
-    <Compile Include="Codes\GUI\CashDispenser.cs" />
+    <Compile Include="Codes\GUI\CashSlot.cs" />
+    <Compile Include="Codes\GUI\ChequeSlot.cs" />
+    <Compile Include="Codes\GUI\DepositAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Codes\GUI\DepositAmount.Designer.cs">
+      <DependentUpon>DepositAmount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Codes\GUI\GUIforATM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,12 +83,22 @@
     <Compile Include="Codes\States\Step05B_EnterAmtToWithdrawState.cs" />
     <Compile Include="Codes\States\Step05C_TakeCashState.cs" />
     <Compile Include="Codes\States\Step05D_MoreWithdrawalState.cs" />
+    <Compile Include="Codes\States\Step06A_ChooseAcctToDepositState.cs" />
+    <Compile Include="Codes\States\Step06B_InsertCashDepositState.cs" />
+    <Compile Include="Codes\States\Step06D_DisplayTabulatedCash.cs" />
+    <Compile Include="Codes\States\Step06E_MoreDepositState.cs" />
+    <Compile Include="Codes\States\Step06C_RejectTabulatedCashState.cs" />
     <Compile Include="Codes\States\Step07A_ChooseAcctToTransferFundsFromState.cs" />
     <Compile Include="Codes\States\Step07B_ChooseAcctToTransferFundsToState.cs" />
     <Compile Include="Codes\States\Step07C_ConfirmSelectedAcctTransferFundsState.cs" />
     <Compile Include="Codes\States\Step07D_EnterAmountTransferFundsState.cs" />
     <Compile Include="Codes\States\Step07E_ConfirmAmountTransferState.cs" />
     <Compile Include="Codes\States\Step07F_MoreTransferFundsState.cs" />
+    <Compile Include="Codes\States\Step08A_ChooseAcctToInsertChequeState.cs" />
+    <Compile Include="Codes\States\Step08B_InsertChequeState.cs" />
+    <Compile Include="Codes\States\Step08C_DisplayChequeAmountState.cs" />
+    <Compile Include="Codes\States\Step08D_RejectChequeState.cs" />
+    <Compile Include="Codes\States\Step08E_MoreDepositChequeState.cs" />
     <Compile Include="Codes\States\Step09_ViewAboutInfoState.cs" />
     <Compile Include="Codes\States\Step99_RemoveCardState.cs" />
     <Compile Include="Codes\Utility\IsOfType.cs" />
@@ -90,6 +107,9 @@
     <Compile Include="Codes\States\State.cs" />
     <Compile Include="Codes\States\Step02_ValidatePINState.cs" />
     <Compile Include="Codes\States\Step01_WaitForBankCardState.cs" />
+    <EmbeddedResource Include="Codes\GUI\DepositAmount.resx">
+      <DependentUpon>DepositAmount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Codes\GUI\GUIforATM.resx">
       <DependentUpon>GUIforATM.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +171,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cashremindersound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atm-tabulatingcash.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper_flutter.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

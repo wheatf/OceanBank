@@ -48,10 +48,13 @@
             this.right3BTN = new System.Windows.Forms.Button();
             this.right2BTN = new System.Windows.Forms.Button();
             this.right1BTN = new System.Windows.Forms.Button();
-            this.rightPicBox = new System.Windows.Forms.PictureBox();
-            this.leftPicBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.bottomPicBox = new System.Windows.Forms.PictureBox();
+            this.rightPicBox = new System.Windows.Forms.PictureBox();
+            this.leftPicBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.bottomPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPicBox)).BeginInit();
             this.SuspendLayout();
@@ -248,6 +251,43 @@
             this.right1BTN.UseVisualStyleBackColor = true;
             this.right1BTN.Click += new System.EventHandler(this.right1BTN_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(55, 233);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Cash Slot";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(637, 233);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 17);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Card Reader";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(361, 560);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 17);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Cheque Slot";
+            // 
+            // bottomPicBox
+            // 
+            this.bottomPicBox.Location = new System.Drawing.Point(180, 583);
+            this.bottomPicBox.Name = "bottomPicBox";
+            this.bottomPicBox.Size = new System.Drawing.Size(447, 106);
+            this.bottomPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bottomPicBox.TabIndex = 32;
+            this.bottomPicBox.TabStop = false;
+            this.bottomPicBox.Click += new System.EventHandler(this.bottomPicBox_Click);
+            // 
             // rightPicBox
             // 
             this.rightPicBox.Location = new System.Drawing.Point(576, 253);
@@ -268,29 +308,13 @@
             this.leftPicBox.TabStop = false;
             this.leftPicBox.Click += new System.EventHandler(this.leftPicBox_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 233);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 17);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Cash Dispenser";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(624, 233);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 17);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Card Reader";
-            // 
             // GUIforATM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 518);
+            this.ClientSize = new System.Drawing.Size(807, 701);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.bottomPicBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rightPicBox);
@@ -315,10 +339,13 @@
             this.Controls.Add(this.smallDisplayLBL);
             this.Controls.Add(this.bigDisplayLBL);
             this.Controls.Add(this.left1BTN);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "GUIforATM";
             this.Text = "OceanBank ATM Emulator";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GUIforATM_KeyPress);
+            ((System.ComponentModel.ISupportInitialize)(this.bottomPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftPicBox)).EndInit();
             this.ResumeLayout(false);
@@ -352,6 +379,8 @@
         private System.Windows.Forms.PictureBox rightPicBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox bottomPicBox;
+        private System.Windows.Forms.Label label3;
     }
 }
 

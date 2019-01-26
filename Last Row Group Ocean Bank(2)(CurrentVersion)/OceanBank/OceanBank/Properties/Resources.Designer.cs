@@ -61,6 +61,15 @@ namespace OceanBank.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream atm_tabulatingcash {
+            get {
+                return ResourceManager.GetStream("atm_tabulatingcash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap CardReaderEjectCard {
@@ -143,6 +152,15 @@ namespace OceanBank.Properties {
         internal static System.IO.UnmanagedMemoryStream keysound {
             get {
                 return ResourceManager.GetStream("keysound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream paper_flutter {
+            get {
+                return ResourceManager.GetStream("paper_flutter", resourceCulture);
             }
         }
     }

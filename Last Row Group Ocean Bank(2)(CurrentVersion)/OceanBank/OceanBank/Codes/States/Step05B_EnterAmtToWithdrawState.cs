@@ -101,13 +101,13 @@ namespace OceanBank
                 amountEnteredTxt = "";
                 smallDisplayLBL.Text = amountEnteredTxt;
             }
-            // input is not numeric
-            else if(!amountEnteredTxt.IsDouble())
-            {
-                bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nOnly numeric values are allowed";
-                amountEnteredTxt = "";
-                smallDisplayLBL.Text = amountEnteredTxt;
-            }
+            //// input is not numeric
+            //else if(!amountEnteredTxt.IsDouble())
+            //{
+            //    bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nOnly numeric values are allowed";
+            //    amountEnteredTxt = "";
+            //    smallDisplayLBL.Text = amountEnteredTxt;
+            //}
             else
             {
                 withdrawAmt = Convert.ToDouble(amountEnteredTxt);

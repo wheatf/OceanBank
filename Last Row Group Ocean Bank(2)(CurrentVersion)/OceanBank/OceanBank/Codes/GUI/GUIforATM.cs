@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OceanBank.Codes.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,8 @@ namespace OceanBank
     public partial class GUIforATM : Form
     {
         private CardReader theCardReader;
-        private CashDispenser theCashDispenser;
+        private CashSlot theCashDispenser;
+        private ChequeSlot theChequeSlot;
         private State currentState;
         private List<Card> cards;
         private Card theCard;
@@ -28,8 +30,10 @@ namespace OceanBank
 
             theCardReader = new CardReader(rightPicBox);
             theCardReader.withoutCard();
-            theCashDispenser = new CashDispenser(leftPicBox);
+            theCashDispenser = new CashSlot(leftPicBox);
             theCashDispenser.withoutCash();
+            theChequeSlot = new ChequeSlot(bottomPicBox);
+            theChequeSlot.withoutCheque();
 
             keysound = new SoundPlayer(Properties.Resources.keysound);
             keysound.Load();
@@ -37,12 +41,17 @@ namespace OceanBank
             currentState = new WaitForBankCardState(this, "ENGLISH");
         }
 
+        public ChequeSlot getChequeSlot()
+        {
+            return theChequeSlot;
+        }
+
         public CardReader getCardReader()
         {
             return theCardReader;
         }
 
-        public CashDispenser getCashDispenser()
+        public CashSlot getCashSlot()
         {
             return theCashDispenser;
         }
@@ -62,6 +71,11 @@ namespace OceanBank
             return cards;
         }
 
+        public void GoToState(State state)
+        {
+            currentState = state;
+        }
+
         private void leftPicBox_Click(object sender, EventArgs e)
         {
             currentState = currentState.handleLeftPicBoxClick();
@@ -70,6 +84,11 @@ namespace OceanBank
         private void rightPicBox_Click(object sender, EventArgs e)
         {
             currentState = currentState.handleRightPicBoxClick();
+        }
+
+        private void bottomPicBox_Click(object sender, EventArgs e)
+        {
+            currentState = currentState.handleBottomPicBoxClick();
         }
 
         private void key1BTN_Click(object sender, EventArgs e)

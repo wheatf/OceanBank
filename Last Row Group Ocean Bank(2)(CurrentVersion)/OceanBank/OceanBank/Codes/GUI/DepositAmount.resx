@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CardReaderWithoutCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CardReaderWithoutCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cardsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cardsound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CashDispenserEmpty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CardReaderWithoutCard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CashDispenserWithCash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CashDispenserWithCash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="keysound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\keysound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CardReaderEjectCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CardReaderEjectCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CardReaderWithCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CardReaderWithCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cashdispensingsound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cashdispensing.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cashremindersound" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cashremindersound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="atm_tabulatingcash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\atm-tabulatingcash.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="paper_flutter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paper_flutter.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

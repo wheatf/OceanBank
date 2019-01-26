@@ -7,13 +7,14 @@ using System.Windows.Forms;
 
 namespace OceanBank
 {
-    abstract class State
+    public abstract class State
     {
         protected GUIforATM mainForm;
         protected Button left1BTN, left2BTN, left3BTN, left4BTN, right1BTN, right2BTN, right3BTN, right4BTN;
         protected Label bigDisplayLBL, smallDisplayLBL;
         protected CardReader theCardReader;
-        protected CashDispenser theCashDispenser;
+        protected CashSlot theCashSlot;
+        protected ChequeSlot theChequeSlot;
         protected string language;
         protected Card theCard;
 
@@ -35,7 +36,8 @@ namespace OceanBank
             smallDisplayLBL = (Label)mainForm.Controls["smallDisplayLBL"];
 
             theCardReader = mainForm.getCardReader();
-            theCashDispenser = mainForm.getCashDispenser();
+            theCashSlot = mainForm.getCashSlot();
+            theChequeSlot = mainForm.getChequeSlot();
 
             this.language = language.ToUpper(); //default language
 
@@ -44,6 +46,7 @@ namespace OceanBank
 
         public virtual State handleLeftPicBoxClick() { return this; }
         public virtual State handleRightPicBoxClick() { return this; }
+        public virtual State handleBottomPicBoxClick() { return this; }
         public virtual State handleKey1BTNClick() { return this; }
         public virtual State handleKey2BTNClick() { return this; }
         public virtual State handleKey3BTNClick() { return this; }

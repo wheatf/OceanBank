@@ -23,8 +23,8 @@ namespace OceanBank
             {
                 bigDisplayLBL.Text = "Please select your transaction";
                 smallDisplayLBL.Text = "";
-                left1BTN.Text = "View Balance"; left2BTN.Text = "Withdraw"; left3BTN.Text = (theCard.getNumAccounts() > 1 ? "Transfer Funds" : ""); left4BTN.Text = "";
-                right1BTN.Text = "About OceanBank"; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Exit";
+                left1BTN.Text = "View Balance"; left2BTN.Text = "Withdraw Cash"; left3BTN.Text = (theCard.getNumAccounts() > 1 ? "Transfer Funds" : ""); left4BTN.Text = "Deposit Cash";
+                right1BTN.Text = "About OceanBank"; right2BTN.Text = "Deposit Cheque"; right3BTN.Text = ""; right4BTN.Text = "Exit";
             }
         }
 
@@ -53,10 +53,20 @@ namespace OceanBank
             }
         }
 
+        public override State handleLeft4BTNClick()
+        {
+            return new ChooseAcctToDepositState(mainForm, language);
+        }
+
         public override State handleRight1BTNClick()
         {
             State nextStep = new ViewAboutInfoState(mainForm, language);
             return nextStep;
+        }
+
+        public override State handleRight2BTNClick()
+        {
+            return new ChooseAcctToInsertChequeState(mainForm, language);
         }
 
         public override State handleRight4BTNClick()

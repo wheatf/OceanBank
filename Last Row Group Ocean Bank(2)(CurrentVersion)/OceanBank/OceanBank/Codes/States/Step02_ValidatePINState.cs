@@ -9,6 +9,8 @@ namespace OceanBank
 {
     class ValidatePINState : State
     {
+        private static readonly int MAX_NO_OF_TRIES = 3;
+        private static int noOfTries = 1;
         private int noDigitsForPIN = 6;
         private string PINentered;
 
@@ -26,10 +28,17 @@ namespace OceanBank
                 bigDisplayLBL.Text = "Please enter PIN";
                 smallDisplayLBL.Text = "";
                 left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
-                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
+                right1BTN.Text = "Clear"; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
             }
 
             PINentered = "";
+        }
+
+        public override State handleRight1BTNClick()
+        {
+            PINentered = "";
+            smallDisplayLBL.Text = "";
+            return this;
         }
 
 
@@ -115,23 +124,37 @@ namespace OceanBank
                     if (validatePIN() == true)
                     {
                         nextStep = new DisplayMainMenuState(mainForm, language);
+                        noOfTries = 1;
                     }
                     else
                     {
-                        if (language.ToUpper() == "CHINESE")
-                            bigDisplayLBL.Text = "错误密码";
-                        else
-                            bigDisplayLBL.Text = "Wrong PIN";
-                        bigDisplayLBL.Refresh();
+                        noOfTries++;
 
-                        pauseforMilliseconds(1000);
-                        if (language.ToUpper() == "CHINESE")
-                            bigDisplayLBL.Text = "请再次输入密码";
+                        if (noOfTries <= MAX_NO_OF_TRIES)
+                        {
+                            if (language.ToUpper() == "CHINESE")
+                                bigDisplayLBL.Text = "错误密码";
+                            else
+                                bigDisplayLBL.Text = "Wrong PIN";
+                            bigDisplayLBL.Refresh();
+
+                            pauseforMilliseconds(1000);
+                            if (language.ToUpper() == "CHINESE")
+                                bigDisplayLBL.Text = "请再次输入密码";
+                            else
+                                if(noOfTries == MAX_NO_OF_TRIES)
+                                    bigDisplayLBL.Text = "!!! LAST ATTEMPT !!!\nPlease enter PIN again";
+                                else
+                                    bigDisplayLBL.Text = "Please enter PIN again";
+                            smallDisplayLBL.Text = "";
+                            PINentered = "";
+                            nextStep = this;
+                        }
                         else
-                            bigDisplayLBL.Text = "Please enter PIN again";
-                        smallDisplayLBL.Text = "";
-                        PINentered = "";
-                        nextStep = this;
+                        {
+                            nextStep = new RemoveCardState(mainForm, language);
+                            noOfTries = 1;
+                        }
                     }
                 }
 

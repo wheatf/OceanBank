@@ -105,13 +105,13 @@ namespace OceanBank
                 amountEnteredTxt = "";
                 smallDisplayLBL.Text = amountEnteredTxt;
             }
-            // input is not numeric
-            else if (!amountEnteredTxt.IsDouble())
-            {
-                bigDisplayLBL.Text = "Only numeric values are allowed";
-                amountEnteredTxt = "";
-                smallDisplayLBL.Text = amountEnteredTxt;
-            }
+            //// input is not numeric
+            //else if (!amountEnteredTxt.IsDouble())
+            //{
+            //    bigDisplayLBL.Text = "Only numeric values are allowed";
+            //    amountEnteredTxt = "";
+            //    smallDisplayLBL.Text = amountEnteredTxt;
+            //}
             else
             {
                 transferAmt = Convert.ToDouble(amountEnteredTxt);
