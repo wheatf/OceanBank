@@ -14,11 +14,34 @@ namespace OceanBank
         {
             this.acctNoFrom = acctNoFrom;
 
-            bigDisplayLBL.Text = bigDisplayLBL.Text = "Please select an account to transfer your funds to";
-            smallDisplayLBL.Text = "";
-            left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
-            right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Back";
-
+            if(language.ToUpper() == "CHINESE")
+            {
+                bigDisplayLBL.Text = bigDisplayLBL.Text = "请选择一个帐户将资金转入";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "背部";
+            }
+            else if(language.ToUpper() == "MALAY")
+            {
+                bigDisplayLBL.Text = bigDisplayLBL.Text = "Sila pilih akaun untuk memindahkan dana anda";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Kembali";
+            }
+            else if(language.ToUpper() == "TAMIL")
+            {
+                bigDisplayLBL.Text = bigDisplayLBL.Text = "உங்கள் நிதிகளை மாற்றுவதற்கு ஒரு கணக்கைத் தேர்ந்தெடுக்கவும்";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "மீண்டும்";
+            }
+            else
+            {
+                bigDisplayLBL.Text = bigDisplayLBL.Text = "Please select an account to transfer your funds to";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Back";
+            }
 
             string acctNo;
 

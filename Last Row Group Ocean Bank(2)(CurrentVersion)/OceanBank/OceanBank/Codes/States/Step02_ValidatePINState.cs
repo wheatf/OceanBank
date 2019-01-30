@@ -21,7 +21,21 @@ namespace OceanBank
                 bigDisplayLBL.Text = "请输入密码";
                 smallDisplayLBL.Text = "";
                 left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
-                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
+                right1BTN.Text = "明确"; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
+            }
+            else if(language.ToUpper() == "MALAY")
+            {
+                bigDisplayLBL.Text = "Sila masukkan PIN";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "Jelas"; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
+            }
+            else if(language.ToUpper() == "TAMIL")
+            {
+                bigDisplayLBL.Text = "PIN ஐ உள்ளிடுக";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "தெளிவு"; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
             }
             else //ENGLISH
             {
@@ -102,7 +116,7 @@ namespace OceanBank
             return nextStep;
         }
 
-        private Boolean validatePIN()
+        private bool validatePIN()
         {
             if (PINentered == theCard.getPIN())
                 return true;
@@ -117,7 +131,7 @@ namespace OceanBank
             if (PINentered.Length < noDigitsForPIN)
             {
                 PINentered += k;
-                smallDisplayLBL.Text = PINentered;
+                smallDisplayLBL.Text += '*';
                 smallDisplayLBL.Refresh();
                 if (PINentered.Length == noDigitsForPIN)
                 {
@@ -134,18 +148,39 @@ namespace OceanBank
                         {
                             if (language.ToUpper() == "CHINESE")
                                 bigDisplayLBL.Text = "错误密码";
+                            else if (language.ToUpper() == "MALAY")
+                                bigDisplayLBL.Text = "PIN salah";
+                            else if (language.ToUpper() == "TAMIL")
+                                bigDisplayLBL.Text = "தவறான PIN";
                             else
                                 bigDisplayLBL.Text = "Wrong PIN";
                             bigDisplayLBL.Refresh();
 
                             pauseforMilliseconds(1000);
-                            if (language.ToUpper() == "CHINESE")
-                                bigDisplayLBL.Text = "请再次输入密码";
-                            else
-                                if(noOfTries == MAX_NO_OF_TRIES)
+
+                            if(noOfTries == MAX_NO_OF_TRIES)
+                            {
+                                if (language.ToUpper() == "CHINESE")
+                                    bigDisplayLBL.Text = "!!! 最后一次尝试 !!!\n请再次输入密码";
+                                else if (language.ToUpper() == "MALAY")
+                                    bigDisplayLBL.Text = "!!! Percubaan terakhir !!!\nSila masukkan PIN lagi";
+                                else if (language.ToUpper() == "TAMIL")
+                                    bigDisplayLBL.Text = "!!! கடைசி முயற்சி !!!\nமீண்டும் PIN ஐ உள்ளிடுக";
+                                else
                                     bigDisplayLBL.Text = "!!! LAST ATTEMPT !!!\nPlease enter PIN again";
+                            }
+                            else
+                            {
+                                if (language.ToUpper() == "CHINESE")
+                                    bigDisplayLBL.Text = "请再次输入密码";
+                                else if (language.ToUpper() == "MALAY")
+                                    bigDisplayLBL.Text = "Sila masukkan PIN lagi";
+                                else if (language.ToUpper() == "TAMIL")
+                                    bigDisplayLBL.Text = "மீண்டும் PIN ஐ உள்ளிடுக";
                                 else
                                     bigDisplayLBL.Text = "Please enter PIN again";
+                            }
+
                             smallDisplayLBL.Text = "";
                             PINentered = "";
                             nextStep = this;

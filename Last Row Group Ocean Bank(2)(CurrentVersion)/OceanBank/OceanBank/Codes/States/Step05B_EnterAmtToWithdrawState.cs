@@ -16,10 +16,34 @@ namespace OceanBank
         {
             this.acctNo = acctNo;
 
-            bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nEnter amount to withdraw";
-            smallDisplayLBL.Text = "";
-            left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
-            right1BTN.Text = "Ok"; right2BTN.Text = "Clear"; right3BTN.Text = ""; right4BTN.Text = "Back";
+            if (language.ToUpper() == "CHINESE")
+            {
+                bigDisplayLBL.Text = "退出账户 " + acctNo + "\n输入提款金额";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "好"; right2BTN.Text = "明确"; right3BTN.Text = ""; right4BTN.Text = "背部";
+            }
+            else if (language.ToUpper() == "MALAY")
+            {
+                bigDisplayLBL.Text = "Mengeluarkan dari Akaun " + acctNo + "\nMasukkan jumlah untuk menarik balik";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "Ok"; right2BTN.Text = "Jelas"; right3BTN.Text = ""; right4BTN.Text = "Kembali";
+            }
+            else if (language.ToUpper() == "TAMIL")
+            {
+                bigDisplayLBL.Text = "கணக்கிலிருந்து வெளியேறவும் " + acctNo + "\nதிரும்பப் பெற அளவு உள்ளிடவும்";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "சரி"; right2BTN.Text = "தெளிவு"; right3BTN.Text = ""; right4BTN.Text = "மீண்டும்";
+            }
+            else
+            {
+                bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nEnter amount to withdraw";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "Ok"; right2BTN.Text = "Clear"; right3BTN.Text = ""; right4BTN.Text = "Back";
+            }
 
             amountEnteredTxt = "";
         }
@@ -97,7 +121,15 @@ namespace OceanBank
             // input is empty
             if (string.IsNullOrWhiteSpace(amountEnteredTxt))
             {
-                bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter an amount";
+                if(language.ToUpper() == "CHINESE")
+                    bigDisplayLBL.Text = "退出账户 " + acctNo + "\n请输入金额";
+                else if(language.ToUpper() == "MALAY")
+                    bigDisplayLBL.Text = "Mengeluarkan dari Akaun " + acctNo + "\nSila masukkan amaun";
+                else if(language.ToUpper() == "TAMIL")
+                    bigDisplayLBL.Text = "கணக்கிலிருந்து வெளியேறவும் " + acctNo + "\nதயவுசெய்து ஒரு அளவு உள்ளிடவும்";
+                else
+                    bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter an amount";
+
                 amountEnteredTxt = "";
                 smallDisplayLBL.Text = amountEnteredTxt;
             }
@@ -115,20 +147,44 @@ namespace OceanBank
                 // input is less than or equals 0
                 if(withdrawAmt <= 0)
                 {
-                    bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter an amount larger than 0";
+                    if(language.ToUpper() == "CHINESE")
+                        bigDisplayLBL.Text = "退出账户 " + acctNo + "\n请输入大于0的金额";
+                    else if(language.ToUpper() == "MALAY")
+                        bigDisplayLBL.Text = "Mengeluarkan dari Akaun " + acctNo + "\nSila masukkan jumlah yang lebih besar daripada 0";
+                    else if(language.ToUpper() == "TAMIL")
+                        bigDisplayLBL.Text = "கணக்கிலிருந்து வெளியேறவும் " + acctNo + "\n0 ஐ விட பெரிய அளவு உள்ளிடவும்";
+                    else
+                        bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter an amount larger than 0";
+
                     amountEnteredTxt = "";
                     smallDisplayLBL.Text = amountEnteredTxt;
                 }
                 // input is not in mutiples of 10
                 else if (withdrawAmt % 10d != 0)
                 {
-                    bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter in multiples of 10 or 100";
+                    if(language.ToUpper() == "CHINESE")
+                        bigDisplayLBL.Text = "退出账户 " + acctNo + "\n请输入10或100的倍数";
+                    else if(language.ToUpper() == "MALAY")
+                        bigDisplayLBL.Text = "Mengeluarkan dari Akaun " + acctNo + "\nSila masukkan dalam gandaan 10 atau 100";
+                    else if(language.ToUpper() == "TAMIL")
+                        bigDisplayLBL.Text = "கணக்கிலிருந்து வெளியேறவும் " + acctNo + "\nதயவுசெய்து 10 அல்லது 100 மடங்குகளில் உள்ளிடவும்";
+                    else
+                        bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nPlease enter in multiples of 10 or 100";
+
                     amountEnteredTxt = "";
                     smallDisplayLBL.Text = amountEnteredTxt;
                 }
                 else if (withdrawAmt > withdrawFromAcct.getBalance())
                 {
-                    bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nAmount is larger than your balance\nSelect a smaller amount";
+                    if(language.ToUpper() == "CHINESE")
+                        bigDisplayLBL.Text = "退出账户 " + acctNo + "\n金额大于您的余额\n选择较小的金额";
+                    else if(language.ToUpper() == "MALAY")
+                        bigDisplayLBL.Text = "Mengeluarkan dari Akaun " + acctNo + "\nJumlah lebih besar daripada baki anda\nPilih jumlah yang lebih kecil";
+                    else if(language.ToUpper() == "TAMIL")
+                        bigDisplayLBL.Text = "கணக்கிலிருந்து வெளியேறவும் " + acctNo + "\nஉங்கள் சமநிலையை விட தொகை அதிகமாக உள்ளது\nசிறிய அளவு தேர்ந்தெடுக்கவும்";
+                    else
+                        bigDisplayLBL.Text = "Withdraw from Account " + acctNo + "\nAmount is larger than your balance\nSelect a smaller amount";
+
                     amountEnteredTxt = "";
                     smallDisplayLBL.Text = amountEnteredTxt;
                 }

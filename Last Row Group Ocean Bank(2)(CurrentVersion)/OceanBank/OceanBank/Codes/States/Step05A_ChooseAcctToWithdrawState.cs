@@ -10,11 +10,34 @@ namespace OceanBank
     {
         public ChooseAcctToWithdrawState(GUIforATM mainForm, string language) : base(mainForm, language)
         {
-
-            bigDisplayLBL.Text = "Please select account to withdraw from";
-            smallDisplayLBL.Text = "";
-            left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
-            right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Back to Main Menu";
+            if (language.ToUpper() == "CHINESE")
+            {
+                bigDisplayLBL.Text = "请选择要退出的帐户";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "返回主菜单";
+            }
+            else if (language.ToUpper() == "MALAY")
+            {
+                bigDisplayLBL.Text = "Sila pilih akaun untuk menarik diri dari";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Kembali ke Menu Utama";
+            }
+            else if (language.ToUpper() == "TAMIL")
+            {
+                bigDisplayLBL.Text = "விலகுமாறு கணக்கைத் தேர்ந்தெடுக்கவும்";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "முதன்மை பட்டிக்கு திரும்புக";
+            }
+            else
+            {
+                bigDisplayLBL.Text = "Please select account to withdraw from";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "Back to Main Menu";
+            }
 
             if (theCard.getNumAccounts() >= 1)
                 left1BTN.Text = theCard.getAcctAtIndex(0).getAcctNo();

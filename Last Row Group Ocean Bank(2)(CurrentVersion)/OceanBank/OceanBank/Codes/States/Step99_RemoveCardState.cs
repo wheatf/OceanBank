@@ -19,9 +19,25 @@ namespace OceanBank
                 left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
                 right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
             }
+            else if(language.ToUpper() == "MALAY")
+            {
+                bigDisplayLBL.Text = "Terima kasih kerana menggunakan Ocean Bank\nSila alih keluar kad";
+                smallDisplayLBL.Text = "";
+                theCardReader.ejectCard();
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
+            }
+            else if(language.ToUpper() == "TAMIL")
+            {
+                bigDisplayLBL.Text = "பயன்படுத்துவதற்கு நன்றி கடல் வங்கி\nகார்டை அகற்றவும்";
+                smallDisplayLBL.Text = "";
+                theCardReader.ejectCard();
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
+            }
             else //ENGLISH
             {
-                bigDisplayLBL.Text = "Thank you for using OceanBank\nPlease remove card";
+                bigDisplayLBL.Text = "Thank you for using Ocean Bank\nPlease remove card";
                 smallDisplayLBL.Text = "";
                 theCardReader.ejectCard();
                 left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";

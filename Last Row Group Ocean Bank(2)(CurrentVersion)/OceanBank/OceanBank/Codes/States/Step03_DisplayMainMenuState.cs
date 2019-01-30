@@ -16,8 +16,22 @@ namespace OceanBank
             {
                 bigDisplayLBL.Text = "请选择交易";
                 smallDisplayLBL.Text = "";
-                left1BTN.Text = "检查存款余额"; left2BTN.Text = "提款"; left3BTN.Text = ""; left4BTN.Text = "";
-                right1BTN.Text = "银行信息"; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "退出";
+                left1BTN.Text = "检查存款余额"; left2BTN.Text = "提款"; left3BTN.Text = (theCard.getNumAccounts() > 1 ? "转移资金" : ""); left4BTN.Text = "存款现金";
+                right1BTN.Text = "银行信息"; right2BTN.Text = "存款支票"; right3BTN.Text = ""; right4BTN.Text = "退出";
+            }
+            else if(language.ToUpper() == "MALAY")
+            {
+                bigDisplayLBL.Text = "Sila pilih urus niaga anda";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = "Lihat Baki"; left2BTN.Text = "Mengeluarkan tunai"; left3BTN.Text = (theCard.getNumAccounts() > 1 ? "Dana Pemindahan" : ""); left4BTN.Text = "Deposit Tunai";
+                right1BTN.Text = "Mengenai OceanBank"; right2BTN.Text = "Cek Deposit"; right3BTN.Text = ""; right4BTN.Text = "Keluar";
+            }
+            else if(language.ToUpper() == "TAMIL")
+            {
+                bigDisplayLBL.Text = "உங்கள் பரிவர்த்தனைத் தேர்ந்தெடுக்கவும்";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = "இருப்பு காண்க"; left2BTN.Text = "பணத்தை விலக்கு"; left3BTN.Text = (theCard.getNumAccounts() > 1 ? "பரிமாற்ற நிதிகள்" : ""); left4BTN.Text = "வைப்பு பண";
+                right1BTN.Text = "பற்றி கடல்வங்கி"; right2BTN.Text = "வைப்பு காசோலை"; right3BTN.Text = ""; right4BTN.Text = "வெளியேறு";
             }
             else //ENGLISH
             {

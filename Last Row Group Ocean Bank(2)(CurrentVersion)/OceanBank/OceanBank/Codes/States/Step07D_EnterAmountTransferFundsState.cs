@@ -21,10 +21,34 @@ namespace OceanBank
             this.acctNoFrom = acctNoFrom;
             this.acctNoTo = acctNoTo;
 
-            bigDisplayLBL.Text = bigDisplayLBL.Text = "Please enter the amount to transfer";
-            smallDisplayLBL.Text = "";
-            left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
-            right1BTN.Text = "Ok"; right2BTN.Text = "Clear"; right3BTN.Text = ""; right4BTN.Text = "Back";
+            if(language.ToUpper() == "CHINESE")
+            {
+                bigDisplayLBL.Text = bigDisplayLBL.Text = "请输入要转帐的金额";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "好"; right2BTN.Text = "明确"; right3BTN.Text = ""; right4BTN.Text = "背部";
+            }
+            else if(language.ToUpper() == "MALAY")
+            {
+                bigDisplayLBL.Text = bigDisplayLBL.Text = "Sila masukkan jumlah untuk dipindahkan";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "Ok"; right2BTN.Text = "Jelas"; right3BTN.Text = ""; right4BTN.Text = "Kembali";
+            }
+            else if(language.ToUpper() == "TAMIL")
+            {
+                bigDisplayLBL.Text = bigDisplayLBL.Text = "இடமாற்றம் செய்ய அளவு உள்ளிடவும்";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "சரி"; right2BTN.Text = "தெளிவு"; right3BTN.Text = ""; right4BTN.Text = "மீண்டும்";
+            }
+            else
+            {
+                bigDisplayLBL.Text = bigDisplayLBL.Text = "Please enter the amount to transfer";
+                smallDisplayLBL.Text = "";
+                left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
+                right1BTN.Text = "Ok"; right2BTN.Text = "Clear"; right3BTN.Text = ""; right4BTN.Text = "Back";
+            }
 
             amountEnteredTxt = "";
         }
@@ -101,7 +125,15 @@ namespace OceanBank
             // input is empty
             if (string.IsNullOrWhiteSpace(amountEnteredTxt))
             {
-                bigDisplayLBL.Text = "Please enter an amount";
+                if(language.ToUpper() == "CHINESE")
+                    bigDisplayLBL.Text = "请输入金额";
+                else if(language.ToUpper() == "MALAY")
+                    bigDisplayLBL.Text = "Sila masukkan amaun";
+                else if(language.ToUpper() == "TAMIL")
+                    bigDisplayLBL.Text = "தயவுசெய்து ஒரு அளவு உள்ளிடவும்";
+                else
+                    bigDisplayLBL.Text = "Please enter an amount";
+
                 amountEnteredTxt = "";
                 smallDisplayLBL.Text = amountEnteredTxt;
             }
@@ -119,13 +151,29 @@ namespace OceanBank
                 // input is less than or equals 0
                 if (transferAmt <= 0)
                 {
-                    bigDisplayLBL.Text = "Please enter an amount larger than 0";
+                    if(language.ToUpper() == "CHINESE")
+                        bigDisplayLBL.Text = "请输入大于0的金额";
+                    else if(language.ToUpper() == "MALAY")
+                        bigDisplayLBL.Text = "Sila masukkan jumlah yang lebih besar daripada 0";
+                    else if(language.ToUpper() == "TAMIL")
+                        bigDisplayLBL.Text = "0 ஐ விட பெரிய அளவு உள்ளிடவும்";
+                    else
+                        bigDisplayLBL.Text = "Please enter an amount larger than 0";
+
                     amountEnteredTxt = "";
                     smallDisplayLBL.Text = amountEnteredTxt;
                 }
                 else if (transferAmt > transferFromAcct.getBalance())
                 {
-                    bigDisplayLBL.Text = "Amount is larger than " + acctNoFrom + "'s balance\nSelect a smaller amount";
+                    if (language.ToUpper() == "CHINESE")
+                        bigDisplayLBL.Text = "金额大于 " + acctNoFrom + "'s 平衡\n选择较小的金额";
+                    else if (language.ToUpper() == "MALAY")
+                        bigDisplayLBL.Text = "Jumlahnya lebih besar daripada " + acctNoFrom + "'s Seimbang\nPilih jumlah yang lebih kecil";
+                    else if (language.ToUpper() == "TAMIL")
+                        bigDisplayLBL.Text = "தொகை அதிகமாக உள்ளது " + acctNoFrom + "'s இருப்பு\nசிறிய அளவு தேர்ந்தெடுக்கவும்";
+                    else
+                        bigDisplayLBL.Text = "Amount is larger than " + acctNoFrom + "'s balance\nSelect a smaller amount";
+
                     amountEnteredTxt = "";
                     smallDisplayLBL.Text = amountEnteredTxt;
                 }

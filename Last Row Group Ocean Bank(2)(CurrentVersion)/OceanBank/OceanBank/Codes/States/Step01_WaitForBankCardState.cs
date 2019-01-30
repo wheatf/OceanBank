@@ -17,13 +17,23 @@ namespace OceanBank
                 bigDisplayLBL.Text = "欢迎来到海洋银行\n请插入银行卡";
                 smallDisplayLBL.Text = "";
             }
+            else if (language.ToUpper() == "MALAY")
+            {
+                bigDisplayLBL.Text = "Selamat datang ke Ocean Bank\nSila masukkan kad";
+                smallDisplayLBL.Text = "";
+            }
+            else if(language.ToUpper() == "TAMIL")
+            {
+                bigDisplayLBL.Text = "வரவேற்கிறோம் பெருங்கடல் வங்கி\nஅட்டை செருகவும்";
+                smallDisplayLBL.Text = "";
+            }
             else //ENGLISH
             {
                 bigDisplayLBL.Text = "Welcome to Ocean Bank\nPlease insert card";
                 smallDisplayLBL.Text = "";
             }
 
-            left1BTN.Text = "English"; left2BTN.Text = "中文"; left3BTN.Text = ""; left4BTN.Text = "";
+            left1BTN.Text = "English"; left2BTN.Text = "中文"; left3BTN.Text = "Melayu"; left4BTN.Text = "தமிழ்";
             right1BTN.Text = ""; right2BTN.Text = ""; right3BTN.Text = ""; right4BTN.Text = "";
         }
 
@@ -61,5 +71,16 @@ namespace OceanBank
             return nextStep;
         }
 
+        public override State handleLeft3BTNClick()
+        {
+            State nextStep = new WaitForBankCardState(mainForm, "MALAY");
+            return nextStep;
+        }
+
+        public override State handleLeft4BTNClick()
+        {
+            State nextStep = new WaitForBankCardState(mainForm, "TAMIL");
+            return nextStep;
+        }
     }
 }

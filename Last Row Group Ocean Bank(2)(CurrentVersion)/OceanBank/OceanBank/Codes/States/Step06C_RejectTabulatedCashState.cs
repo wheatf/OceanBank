@@ -12,6 +12,7 @@ namespace OceanBank
 
         public RejectTabulatedCashState(GUIforATM mainForm, string language, string acctNo, string error) : base(mainForm, language)
         {
+
             bigDisplayLBL.Text = error;
             smallDisplayLBL.Text = "";
             left1BTN.Text = ""; left2BTN.Text = ""; left3BTN.Text = ""; left4BTN.Text = "";
